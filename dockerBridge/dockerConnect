@@ -1,0 +1,6 @@
+
+# 这里会创建容器，所以在dockerfile里只需要创建容器镜像即可 即mysql-tmall:latest0628和java-hello:latest0628
+docker run -it --network=my_net0628--name=mysql-tmall0628 mysql-tmall:latest0628
+docker run -it --network=my_net0628 --name=java-hello0628 java-hello:latest0628
+
+docker network connect 网络名称 容器名称
