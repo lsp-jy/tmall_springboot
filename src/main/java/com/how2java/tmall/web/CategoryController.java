@@ -28,6 +28,7 @@ public class CategoryController {
 
 	@PostMapping("/categories")
 	public Object add(Category bean, MultipartFile image, HttpServletRequest request) throws Exception {
+		System.out.println("测试变化后git上传");
 		categoryServiceImpl.add(bean);
 		saveOrUpdateImageFile(bean, image, request);
 		return bean;
