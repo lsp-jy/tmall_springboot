@@ -9,6 +9,8 @@ import com.how2java.tmall.util.Page4Navigator;
  */
 public interface CategoryService {
 
+    public String VERSION = "1.0-lsp";
+
     public Page4Navigator<Category> list(int start, int size, int navigatePages);
 
     public List<Category> list();

@@ -1,8 +1,8 @@
 package com.how2java.tmall;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
@@ -21,11 +21,5 @@ public class Application extends SpringBootServletInitializer {
 
     }
 
-    @Configuration
-    @EnableDubbo(scanBasePackages = "com.how2java.tmall.service")
-    @PropertySource("classpath:/spring/dubbo-consumer.properties")
-    @ComponentScan(value = {"com.how2java.tmall.web"})
-    static public class ConsumerConfiguration {
 
-    }
 }

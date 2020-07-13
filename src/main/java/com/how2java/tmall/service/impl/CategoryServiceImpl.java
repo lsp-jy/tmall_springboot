@@ -13,7 +13,7 @@ import com.how2java.tmall.service.CategoryService;
 import com.how2java.tmall.util.Page4Navigator;
 
 
-@Service
+@Service(interfaceClass = CategoryService.class ,version =CategoryService.VERSION)
 public class CategoryServiceImpl implements CategoryService {
 	@Autowired CategoryDAO categoryDAO;
 
