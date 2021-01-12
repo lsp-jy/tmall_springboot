@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GloabalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public String defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+    	// 测试
     	e.printStackTrace();
     	Class constraintViolationException = Class.forName("org.hibernate.exception.ConstraintViolationException");
     	if(null!=e.getCause()  && constraintViolationException==e.getCause().getClass()) {
